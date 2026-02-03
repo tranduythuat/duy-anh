@@ -20,7 +20,7 @@ function toggleRsvp(e) {
                     Bạn có tham dự lễ cưới của chúng mình không?
                 </label>
                 <select id="confirm" required name="confirm" class="form-input" style="width:100%">
-                    <option value=""></option>
+                    <option value="" disabled selected>-- Please select (Vui lòng chọn) --</option>
                     <option value="yes">Yes, I'll be there (Có, tôi sẽ tham dự)</option>
                     <option value="no">Sorry, can't make it (Không, tôi không tham dự được)</option>
                 </select>
@@ -30,13 +30,13 @@ function toggleRsvp(e) {
                     Bạn có quẩy cùng chúng mình ở after party không?
                 </label>
                 <select id="after-party" name="after_party" class="form-input" style="width:100%">
-                    <option value=""></option>
+                    <option value="" disabled selected>-- Please select (Vui lòng chọn) --</option>
                     <option value="yes">Yes, I'll be there (Có, tôi sẽ tham dự)</option>
                     <option value="no">Sorry, can't make it (Không, tôi không tham dự được)</option>
                 </select>
                 <label for="wish" style="display:block;margin-bottom:6px;">
-                    WRITE A WISH FOR THE BRIDE AND GROOM! <br>
-                    Hãy dành những lời chúc tốt đẹp nhất gửi đến Duy & Anh nhé!
+                    Write a wish for the bride and groom! <br>
+                    Hãy dành những lời chúc tốt đẹp nhất gửi đến <br> Duy & Anh nhé!
                 </label>
                 <textarea style="width:100%" class="form-input"
                     id="wish"

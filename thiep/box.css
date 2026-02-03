@@ -800,15 +800,16 @@ div:where(.swal2-container) h2:where(.swal2-title) {
   color: black;
 }
 
-#rsvpForm input, select {
+#rsvpForm input, select, textarea {
   padding: 2%;
   font-size: 12px;
+  outline: none;
+  border-radius: 6px;
+  background: transparent;
 }
 
-#rsvpForm textarea {
+#rsvpForm  textarea {
   height: 100px;
-  padding: 2%;
-  font-size: 12px;
 }
 
 #rsvpForm .form-input {
