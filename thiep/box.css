@@ -340,6 +340,18 @@
   margin-bottom: 20px;
 }
 
+.note {
+  margin-bottom: 10%;
+}
+
+.note p {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: var(--font-gotham);
+  font-weight: 600;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -806,6 +818,7 @@ div:where(.swal2-container) h2:where(.swal2-title) {
   outline: none;
   border-radius: 6px;
   background: transparent;
+  border: 2px solid black;
 }
 
 #rsvpForm  textarea {

@@ -34,6 +34,10 @@
     .lb-rec2 {
         font-size: calc((17 / 500) * 100vw);
     }
+    
+    .note p {
+        font-size: calc((18 / 500) * 100vw);
+    }
 
     .lb-rsvp3 {
         font-size: calc((20 / 500) * 100vw);
