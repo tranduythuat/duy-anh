@@ -64,8 +64,20 @@
         font-size: calc((14 / 500) * 100vw);
     }
 
+    #rsvpForm select, input {
+        height: calc((36 / 500) * 100vw);
+      }
+
     #rsvpForm input,
     select, textarea {
         font-size: calc((12 / 500) * 100vw);
+    }
+
+    div:where(.swal2-container) h2:where(.swal2-title) {
+        font-size: calc((30 / 500) * 100vw);;
+    }
+
+    .confirm-sub-vn {
+        font-size: calc((16 / 500) * 100vw);;
     }
 }

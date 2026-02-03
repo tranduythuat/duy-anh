@@ -803,6 +803,9 @@ div.hamburger-box.active .bottom {
 div:where(.swal2-container) h2:where(.swal2-title) {
   font-family: var(--font-gotham);
 }
+.confirm-sub-vn {
+  font-size: 16px;
+}
 #rsvpForm {
   font-family: var(--font-gotham);
 }
@@ -812,6 +815,10 @@ div:where(.swal2-container) h2:where(.swal2-title) {
   color: black;
 }
 
+#rsvpForm select, input {
+  height: 36px;
+}
+
 #rsvpForm input, select, textarea {
   padding: 2%;
   font-size: 12px;
@@ -819,6 +826,7 @@ div:where(.swal2-container) h2:where(.swal2-title) {
   border-radius: 6px;
   background: transparent;
   border: 2px solid black;
+  color: #000;
 }
 
 #rsvpForm  textarea {

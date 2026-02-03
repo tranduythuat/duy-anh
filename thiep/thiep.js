@@ -7,7 +7,7 @@ function toggleRsvp(e) {
     e.preventDefault();
 
     Swal.fire({
-        title: "Attendance confirmation <br> <span style='font-size:16px'>/Xác nhận tham dự/</span>",
+        title: "Attendance confirmation <br> <span class='confirm-sub-vn'>/Xác nhận tham dự/</span>",
         html: `
             <form id="rsvpForm" style="text-align:left">
                 <label for="name" style="display:block;margin-bottom:6px;">
