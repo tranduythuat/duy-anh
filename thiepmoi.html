@@ -23,9 +23,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"
         type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link href="./thiep/jquery.fancybox.min.css" rel="stylesheet" />
-    <script src="./thiep/jquery.fancybox.min.js"></script>
 </head>
 
 <body>
@@ -35,15 +34,15 @@
 
     <div class="container">
         <div class="container-wrapper">
-                <div class="box-circle">
-                    <div class="circle" id="musicCircle">
-                        <img src="./thiep/anh/cd.png" alt="Music Icon" class="circle-image">
-                        <audio id="audio"
-                            src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/duy-anh/Joseph%20Vincent%20-%20Only%20You%20(Lyrics).mp3"
-                            loop></audio>
-                    </div>
-                    <label for="audio" class="lb-circle">No Music? <br> Click Me</label>
+            <div class="box-circle">
+                <div class="circle" id="musicCircle">
+                    <img src="./thiep/anh/cd.png" alt="Music Icon" class="circle-image">
+                    <audio id="audio"
+                        src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/duy-anh/Joseph%20Vincent%20-%20Only%20You%20(Lyrics).mp3"
+                        loop></audio>
                 </div>
+                <label for="audio" class="lb-circle">No Music? <br> Click Me</label>
+            </div>
             <div class="super-container">
                 <div class="slide-container">
                     <div class="stripe toggle-nav js-nav">
@@ -131,8 +130,7 @@
 
             <div id="rsvp">
                 <div class="fade-up btn">
-                    <a
-                        href="https://forms.gle/LSxwWUFu9i2KDM349">
+                    <a href="#" id="rsvp-btn">
                         <img src="./thiep/anh/rsvp-02.png" alt="" class="img-rsvp1">
                     </a>
                 </div>
@@ -147,79 +145,77 @@
                     được chung vui cùng bạn!</label>
                 <img src="./thiep/anh/7-02.png" alt="" class="img-rsvp2">
             </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        var burger = $(".hamburger-box");
 
+        burger.on("click", function (e) {
+            $(this).toggleClass("active");
+            $('.js-nav').parent().find('.menu').toggleClass('active');
+        });
 
+        // Khi nhấn vào bất kỳ liên kết nào trong menu, menu sẽ đóng lại
+        $('.menu a').on("click", function () {
+            $('.hamburger-box').removeClass("active"); // Xóa class active từ burger
+            $('.js-nav').parent().find('.menu').removeClass('active'); // Đóng menu
+        });
 
+    </script>
+    <script>
+        window.onload = function () {
+            // Lấy tất cả các phần tử cho các hiệu ứng fade-down, fade-up, fade-right, fade-left, zoom-in
+            const fadeDownElements = document.querySelectorAll('.lb4, .lb44, .img-timeline, .img-dress, .til1');  // Các phần tử fade-down
+            const fadeUpElements = document.querySelectorAll('.img-told1, .img-rec1, .btn');    // Các phần tử fade-up
+            const fadeRightElements = document.querySelectorAll('.lb3, .story1');                               // Các phần tử fade-right
+            const fadeLeftElements = document.querySelectorAll('.lb3, .story2');                                // Các phần tử fade-left
+            const zoomInElements = document.querySelectorAll('.img-clm1, .img-clm2, .img-clm3, .img-clm4, .img-clm5, .img-rec2');                // Các phần tử zoom-in
 
+            // Cấu hình của IntersectionObserver
+            const options = {
+                root: null, // Theo mặc định là viewport
+                threshold: 0.5 // Kích hoạt khi 50% phần tử hiển thị trong viewport
+            };
 
-            <script>
-                var burger = $(".hamburger-box");
-
-                burger.on("click", function (e) {
-                    $(this).toggleClass("active");
-                    $('.js-nav').parent().find('.menu').toggleClass('active');
-                });
-
-                // Khi nhấn vào bất kỳ liên kết nào trong menu, menu sẽ đóng lại
-                $('.menu a').on("click", function () {
-                    $('.hamburger-box').removeClass("active"); // Xóa class active từ burger
-                    $('.js-nav').parent().find('.menu').removeClass('active'); // Đóng menu
-                });
-
-            </script>
-            <script>
-                window.onload = function () {
-                    // Lấy tất cả các phần tử cho các hiệu ứng fade-down, fade-up, fade-right, fade-left, zoom-in
-                    const fadeDownElements = document.querySelectorAll('.lb4, .lb44, .img-timeline, .img-dress, .til1');  // Các phần tử fade-down
-                    const fadeUpElements = document.querySelectorAll('.img-told1, .img-rec1, .btn');    // Các phần tử fade-up
-                    const fadeRightElements = document.querySelectorAll('.lb3, .story1');                               // Các phần tử fade-right
-                    const fadeLeftElements = document.querySelectorAll('.lb3, .story2');                                // Các phần tử fade-left
-                    const zoomInElements = document.querySelectorAll('.img-clm1, .img-clm2, .img-clm3, .img-clm4, .img-clm5, .img-rec2');                // Các phần tử zoom-in
-
-                    // Cấu hình của IntersectionObserver
-                    const options = {
-                        root: null, // Theo mặc định là viewport
-                        threshold: 0.5 // Kích hoạt khi 50% phần tử hiển thị trong viewport
-                    };
-
-                    // Tạo đối tượng IntersectionObserver để theo dõi sự xuất hiện và mất đi của phần tử
-                    const observer = new IntersectionObserver((entries, observer) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                // Nếu phần tử xuất hiện trong viewport, thêm lớp "visible"
-                                entry.target.classList.add('visible');
-                            } else {
-                                // Nếu phần tử không còn trong viewport, xóa lớp "visible"
-                                entry.target.classList.remove('visible');
-                            }
-                        });
-                    }, options);
-
-                    // Quan sát các phần tử theo từng hiệu ứng
-                    fadeDownElements.forEach(element => observer.observe(element));
-                    fadeUpElements.forEach(element => observer.observe(element));
-                    fadeRightElements.forEach(element => observer.observe(element));
-                    fadeLeftElements.forEach(element => observer.observe(element));
-                    zoomInElements.forEach(element => observer.observe(element));
-                };
-            </script>
-            <script>
-                const musicCircle = document.getElementById("musicCircle");
-                const audio = document.getElementById("audio");
-
-                // Thêm sự kiện khi nhấn vào hình tròn
-                musicCircle.addEventListener("click", function () {
-                    // Nếu nhạc đang dừng và hình tròn không xoay
-                    if (audio.paused) {
-                        audio.play(); // Phát nhạc
-                        musicCircle.classList.add("spin"); // Bắt đầu xoay liên tục
+            // Tạo đối tượng IntersectionObserver để theo dõi sự xuất hiện và mất đi của phần tử
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Nếu phần tử xuất hiện trong viewport, thêm lớp "visible"
+                        entry.target.classList.add('visible');
                     } else {
-                        audio.pause(); // Dừng nhạc nếu đang phát
-                        musicCircle.classList.remove("spin"); // Dừng xoay
+                        // Nếu phần tử không còn trong viewport, xóa lớp "visible"
+                        entry.target.classList.remove('visible');
                     }
                 });
-            </script>
-            <script src="./thiep/thiep.js"></script>
+            }, options);
+
+            // Quan sát các phần tử theo từng hiệu ứng
+            fadeDownElements.forEach(element => observer.observe(element));
+            fadeUpElements.forEach(element => observer.observe(element));
+            fadeRightElements.forEach(element => observer.observe(element));
+            fadeLeftElements.forEach(element => observer.observe(element));
+            zoomInElements.forEach(element => observer.observe(element));
+        };
+    </script>
+    <script>
+        const musicCircle = document.getElementById("musicCircle");
+        const audio = document.getElementById("audio");
+
+        // Thêm sự kiện khi nhấn vào hình tròn
+        musicCircle.addEventListener("click", function () {
+            // Nếu nhạc đang dừng và hình tròn không xoay
+            if (audio.paused) {
+                audio.play(); // Phát nhạc
+                musicCircle.classList.add("spin"); // Bắt đầu xoay liên tục
+            } else {
+                audio.pause(); // Dừng nhạc nếu đang phát
+                musicCircle.classList.remove("spin"); // Dừng xoay
+            }
+        });
+    </script>
+    <script src="./thiep/thiep.js"></script>
 </body>
 
 </html>

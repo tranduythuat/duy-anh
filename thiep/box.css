@@ -787,7 +787,33 @@ div.hamburger-box.active .bottom {
   top: 20px;
 }
 
+/* rsvp form */
+div:where(.swal2-container) h2:where(.swal2-title) {
+  font-family: var(--font-gotham);
+}
+#rsvpForm {
+  font-family: var(--font-gotham);
+}
 
+#rsvpForm label {
+  font-size: 14px;
+  color: black;
+}
+
+#rsvpForm input, select {
+  padding: 2%;
+  font-size: 12px;
+}
+
+#rsvpForm textarea {
+  height: 100px;
+  padding: 2%;
+  font-size: 12px;
+}
+
+#rsvpForm .form-input {
+  margin-bottom: 5%;
+}
 
 @media (max-width: 500px) {
   .container {
