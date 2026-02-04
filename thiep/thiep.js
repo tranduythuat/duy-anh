@@ -36,7 +36,7 @@ function toggleRsvp(e) {
                 </select>
                 <label for="wish" style="display:block;margin-bottom:6px;">
                     Write a wish for the bride and groom! <br>
-                    Hãy dành những lời chúc tốt đẹp nhất gửi đến <br> Duy & Mai Anh nhé!
+                    Hãy dành những lời chúc tốt đẹp nhất gửi đến <br> Xuân Duy và Mai Anh nhé!
                 </label>
                 <textarea style="width:100%" class="form-input"
                     id="wish"
