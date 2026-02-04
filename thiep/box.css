@@ -277,6 +277,7 @@
   text-align: center;
   margin-bottom: 6%;
   font-size: 16px;
+  margin: 0 15% 5%;
 }
 
 .lb-told3 {
@@ -299,6 +300,7 @@
   text-align: center;
   margin-bottom: 10%;
   word-spacing: 2px;
+  margin: 0 15%;
 }
 
 #reception {
@@ -338,6 +340,10 @@
   font-size: 17px;
   word-spacing: 2px;
   margin-bottom: 20px;
+}
+
+.after-party-title {
+  margin-top: 15%;
 }
 
 .note {
