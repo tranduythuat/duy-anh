@@ -23,7 +23,8 @@
 
     .lb-told1,
     .lb-told3,
-    .lb-rec-time {
+    .lb-rec-time, 
+    .lb-rec3 {
         font-size: calc((16 / 500) * 100vw);
     }
 

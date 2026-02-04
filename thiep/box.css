@@ -330,12 +330,8 @@
   letter-spacing: 1px;
   line-height: 1.5;
   text-transform: uppercase;
-  margin: 5%;
-  text-align: center;
-}
-
-.lb-rec1.after-party-name {
   margin: 2% 5% 5%;
+  text-align: center;
 }
 
 .lb-rec-time {
@@ -349,6 +345,12 @@
   font-size: 17px;
   word-spacing: 2px;
   margin-bottom: 20px;
+}
+
+.lb-rec3 {
+  font-family: var(--font-gotham);
+  font-size: 16px;
+  margin-bottom: 3%;
 }
 
 .after-party-title {
