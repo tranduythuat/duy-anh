@@ -24,6 +24,19 @@ function toggleRsvp(e) {
                     <option value="yes">Yes, I'll be there (Có, tôi sẽ tham dự)</option>
                     <option value="no">Sorry, can't make it (Không, tôi không tham dự được)</option>
                 </select>
+
+                <label for="guest-number" style="display:block;margin-bottom:6px;">
+                    Number of attendees <br>
+                    Số khách tham dự
+                </label>
+                <select id="guest-number" required name="guest_number" class="form-input" style="width:100%">
+                    <option value="" disabled selected>-- Please select (Vui lòng chọn) --</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
         
                 <label for="after-party" style="display:block;margin:12px 0 6px;">
                     And are you ready to party with us at the after party? <br>
@@ -54,6 +67,7 @@ function toggleRsvp(e) {
         preConfirm: () => {
             const name = document.getElementById("name").value;
             const confirm = document.getElementById("confirm").value;
+            const guestNumber = document.getElementById("guest-number").value;
             const afterParty = document.getElementById("after-party").value;
             const wish = document.getElementById("wish").value;
 
@@ -70,6 +84,7 @@ function toggleRsvp(e) {
             return {
                 name,
                 confirm,
+                guest_number: guestNumber,
                 after_party: afterParty,
                 wish
             };
@@ -81,12 +96,13 @@ function toggleRsvp(e) {
         const {
             name = data.name,
             confirm = data.confirm,
+            guest_number = data.guest_number,
             after_party = data.after_party,
             wish = data.after_party,
           } = data;
 
         Swal.fire({
-            title: 'Đang gửi ...',
+            title: 'Sending ...',
             text: "Please wait a moment.",
             icon: "info",
             allowOutsideClick: false,
@@ -103,6 +119,7 @@ function toggleRsvp(e) {
                 body: new URLSearchParams({
                     name,
                     confirm,
+                    guest_number,
                     after_party,
                     wish
                 }),
