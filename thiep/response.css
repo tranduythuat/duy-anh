@@ -9,6 +9,10 @@
         font-size: calc((12 / 500) * 100vw);
     }
 
+    .lb-rec3 {
+        font-size: calc((14 / 500) * 100vw);
+    }
+
     .lb-top,
     .lb-time,
     .lb-time3 {
@@ -23,8 +27,7 @@
 
     .lb-told1,
     .lb-told3,
-    .lb-rec-time, 
-    .lb-rec3 {
+    .lb-rec-time {
         font-size: calc((16 / 500) * 100vw);
     }
 
